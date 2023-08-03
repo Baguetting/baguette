@@ -14,11 +14,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+html {
+  :-webkit-scrollbar {
+    width: 0;
+  }
+
+  overflow-x: hidden;
+}
+
 .navbarjared {
   background-color: var(--background);
   display: flex;
   justify-content: center;
   height: 16vh;
+}
+
+body {
+  background-color: var(--primary);
 }
 
 .navbar {
@@ -35,7 +47,7 @@
 .navbar-item {
   position: relative;
   color: var(--text);
-  padding: 0 11%;
+  padding: 0 6%;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -46,10 +58,17 @@
   padding: 0px;
 }
 
+.minilogo {
+  max-height: 50%;
+  width: auto;
+  padding: 0px;
+  padding-top: 10px;
+}
+
 .sec1 {
   background-color: var(--secondary);
   color: var(--text);
-  padding: 50px;
+  padding: 100px;
 }
 
 .sec1 h2 {
@@ -61,6 +80,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.sec2 {
+  padding: 100px;
+  background-color: var(--secondary);
+}
+
 .box-container {
   display: flex;
   justify-content: center;
@@ -68,25 +92,25 @@
 
 .smol-box {
   background-color: var(--primary);
-  width: 25%; 
-  aspect-ratio: 240/460; 
+  width: 25%;
+  aspect-ratio: 240/460;
   margin: 0 1%;
   position: relative;
 }
 
 .box {
   background-color: var(--primary);
-  width: 30%; 
-  aspect-ratio: 300/500; 
-  margin: 0 1%; 
+  width: 30%;
+  aspect-ratio: 300/500;
+  margin: 0 1%;
   position: relative;
 }
 
 .big-box {
   background-color: var(--primary);
   width: 35%;
-  aspect-ratio: 360/520; 
-  margin: 0 1%; 
+  aspect-ratio: 360/520;
+  margin: 0 1%;
 }
 
 .cover {
@@ -95,18 +119,53 @@
 }
 
 .footer {
-  background-color: var(--background);
+  background-color: var(--primary);
   color: var(--text);
   text-align: center;
-  padding: 2%;
+  padding: 1%;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  margin-top: 0.1vh;
+}
+
+.rights {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+}
+
+.flex {
+  color: var(--text);
+  text-align: left;
+  flex: content;
+  justify-content: left;
+  max-height: 30vh;
+  padding-top: 30px;
+}
+
+ul {
+  list-style: none;
+  color: var(--text);
+  padding-left: 100px;
+}
+
+.linky {
+  color: var(--text);
+  font-size: 2vw;
+  font-family: 'Poppins', sans-serif;
+  right: 100px;
 }
 
 .picture-button {
-  background-image: url('path-to-your-image.jpg');
+  background-image: url('placeholder.jpg');
   background-size: cover;
-  width: 2%; 
-  aspect-ratio: 1/1; 
+  width: 2%;
+  aspect-ratio: 1/1;
   cursor: pointer;
-  margin-left: 1%; 
+  margin-left: 1%;
   transition: transform 0.3s ease;
 }
