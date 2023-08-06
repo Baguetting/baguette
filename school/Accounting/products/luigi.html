@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bake-A-Bread</title>
+    <link rel="stylesheet" href="../bakestyle.css">
+</head>
+
+<body>
+    <nav class="navbarjared">
+        <a href="../bread.html">
+        <img class="logo" height="150%"
+            src="https://cdn.discordapp.com/attachments/751224701472342069/1136063002811043870/BakeALogo3.png">
+        </a>
+    </nav>
+    <nav class="navbar">
+       <a href="../products.html"><div class="navbar-item">Products</div></a>
+       <a href="../F&Q.html"><div class="navbar-item">F&Q</div></a>
+       <a href="../about.html"><div class="navbar-item">About Us</div></a>
+       <a href="../work.html"><div class="navbar-item">Work</div></a> 
+    </nav>
+
+    <section class="product">
+        <div class="product-image">
+            <img src="https://media.discordapp.net/attachments/827149430506782760/1137699684039807006/luigi.png?width=596&height=596" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h2>Breadigi</h2>
+            <p class="description">Breadigi is the whimsical bread creation inspired by everyone's favourite video game hero, Luigi! Crafted with care, this delightful loaf brings the adventurous spirit of the Mushroom Kingdom right to your table. Its soft interior and golden crust capture the essence of traditional baking, while its iconic shape adds a playful twist. Elevate your breakfast or snack time with a touch of gaming nostalgia – each bite is a journey to a tasteful, imaginative world. Experience the magic of Breadigi and let your taste buds embark on a culinary quest like no other.</p>
+            <p class="price">$19.99</p>
+        </div>
+    </section>    
+
+    <section class="product-info">
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="ingredients" onclick="openTab('ingredients')">Ingredients</button>
+            <button class="tab-button" data-tab="nutritional" onclick="openTab('nutritional')">Nutritional Information</button>
+        </div>
+        <div class="tab-content active" id="ingredients-tab">
+            <h2>Ingredients</h2>
+            <p>Wheat Flour, Water, Thickener (1412), Gluten, Vegetable Gum (412), Iodised Salt, Yeast, Soy Flour, Vitamins (Folic Acid, Thiamin).</p>
+            <p>Contains: Wheat, Gluten & Soy</p>
+            <p>May Contain: Rye, Barley, Oats, Spelt, Egg, Milk, Tree Nuts, Sesame Seeds, Lupin</p>
+        </div>
+        <div class="tab-content" id="nutritional-tab">
+            <h2>Nutritional Information</h2>
+            <p>Serving Size: 250g</p>
+            <p>Serving Size Per Package (Average): 500g</p>
+            <img src="https://media.discordapp.net/attachments/827149430506782760/1137711301506899978/nutrition.png?width=803&height=323" alt="Nutritional Image">
+            <p>** Percentage daily intakes are based on an average adult diet of 8700 kJ. Your daily intakes may be higher or lower depending on your energy needs.</p>
+            <p>Please note the nutritional value of each product may vary slightly, due to seasonal and agricultural factors of the ingredients we use in our products.</p>
+        </div>
+    </section>
+    
+
+    <section class="sec2">
+
+    </section>
+
+    <footer class="footer">
+        <div class="flex">
+            <ul>
+                <li><a class="linky" href="../bread.html">Bake-A-Bread</a></li>
+                <li><a class="linky" href="../products.html">Products</a></li>
+                <li><a class="linky" href="../F&Q.html">F&Q</a></li>
+                <li><a class="linky" href="../about.html">About Us</a></li>
+                <li><a class="linky" href="../work.html">Work</a></li>
+            </ul>
+        </div>
+        <div class="flex">
+            <a href="../bread.html">
+        <img class="minilogo" height="123456789%"
+            src="https://cdn.discordapp.com/attachments/751224701472342069/1136063002811043870/BakeALogo3.png">
+            </a>
+        </div>
+    </footer>
+
+    <footer class="bottom">
+        <p class="rights">&copy; 2023 Bake-A-Bread. All rights reserved.</p>
+    </footer>
+</body>
+
+<script>
+    function openTab(tabName) {
+        var tabContent = document.getElementsByClassName("tab-content");
+        var tabButtons = document.getElementsByClassName("tab-button");
+        for (var i = 0; i < tabContent.length; i++) {
+            tabContent[i].classList.remove("active");
+        }
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        document.getElementById(tabName + "-tab").classList.add("active");
+        document.querySelector(`button[data-tab="${tabName}"]`).classList.add("active");
+    }
+</script>
+
+</html>

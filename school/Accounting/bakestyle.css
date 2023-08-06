@@ -1,3 +1,4 @@
+/*Setup and Colours*/
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,7 @@ html {
   overflow-x: hidden;
 }
 
+/*Homepage and General Items*/
 .navbarjared {
   background-color: var(--background);
   display: flex;
@@ -42,12 +44,22 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   position: relative;
+  padding-left: 12vw;
+  padding-right: 12vw;
+}
+
+.navbar :hover {
+  color: var(--primary);
+}
+
+.navbar a {
+  text-decoration: none;
 }
 
 .navbar-item {
   position: relative;
   color: var(--text);
-  padding: 0 6%;
+  padding: 0 8%;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -91,25 +103,25 @@ body {
 }
 
 .smol-box {
-  background-color: var(--primary);
-  width: 25%;
-  aspect-ratio: 240/460;
+  background-color: var(--secondary);
+  width: 35%;
+  aspect-ratio: 300/500;
   margin: 0 1%;
   position: relative;
 }
 
 .box {
-  background-color: var(--primary);
-  width: 30%;
+  background-color: var(--secondary);
+  width: 35%;
   aspect-ratio: 300/500;
   margin: 0 1%;
   position: relative;
 }
 
 .big-box {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   width: 35%;
-  aspect-ratio: 360/520;
+  aspect-ratio: 300/500;
   margin: 0 1%;
 }
 
@@ -160,12 +172,243 @@ ul {
   right: 100px;
 }
 
-.picture-button {
-  background-image: url('placeholder.jpg');
-  background-size: cover;
-  width: 2%;
-  aspect-ratio: 1/1;
+/*Product Page*/
+.products-grid {
+  background-color: var(--secondary);
+  color: var(--text);
+  padding: 50px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Product-Title {
+  font-size: 4vh;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  justify-items: center;
+}
+
+.grid-item {
+  background-color: var(--primary);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+/*F&Q Page*/
+.FandQ {
+  padding: 50px;
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+
+.FandQ h2 {
+  font-size: 3.5vw;
+  margin-bottom: 80px;
+}
+
+.question {
+  font-size: 2.5vw;
+  font-weight: bold;
+  margin: 50px 0;
+}
+
+.answer {
+  font-size: 1.6vw;
+  margin-bottom: 90px;
+  margin-left: 12vw;
+  margin-right: 12vw;
+}
+
+.answer a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+/*Individual Product Pages*/
+.product {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.product-image {
+  flex: 1;
+  align-items: center;
+}
+
+.product-image img {
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  margin-left: 8vw;
+}
+
+.product-details {
+  flex: 1;
+  padding-left: 50px;
+}
+
+.product-details h2 {
+  font-size: 7vh;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-info {
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-details .price {
+  font-size: 5vh;
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+}
+
+.product-details .description {
+  font-size: 2vh;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: var(--background);
+}
+
+.tab-button {
+  background-color: var(--secondary);
+  color: var(--text);
+  border: none;
+  padding: 10px 20px;
   cursor: pointer;
-  margin-left: 1%;
-  transition: transform 0.3s ease;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active {
+  background-color: var(--primary);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.product-info {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+/*About Us Page*/
+
+.aboutus {
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 1vh;
+}
+
+.aboutus h2 {
+  font-size: 2rem;
+}
+
+.aboutus h3 {
+  margin-top: 1.3vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.top-margin {
+  margin-top: 4vh;
+}
+
+.ambassadors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 50px 0;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+
+.ambassador-box {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+}
+
+.ambassador-box p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5vh;
+}
+
+.ambassador-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/*Work*/
+.work {
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 1vh;
+}
+
+.work h1 {
+  font-size: 5vh;
+}
+
+.work h2 {
+  font-size: 3vh;
+  padding-top: 1vh;
+}
+
+.work h3 {
+  font-size: 2vh;
+  padding-top: 0.5vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
 }
